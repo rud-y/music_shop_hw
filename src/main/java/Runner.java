@@ -6,6 +6,7 @@ import instruments.Guitar;
 import instruments.Instrument;
 import otherItems.GuitarString;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -36,15 +37,10 @@ public class Runner {
         System.out.println("There is " + musicShop.getStockCount() + " items in shop inventory." );
         System.out.println("drum1 does " + drum1.play());
 
-
-
-//        for(IPlay eachItem : musicShop.getStockList()) {
-//            System.out.println(eachItem.play());
-//        }
-
-
         System.out.println("Guitar1 markup " + String.format("%.2f",guitar1.calculateMarkup()) + " %.");
         System.out.println("string1 thickness: "  + string1.getThickness());
+
+
 
         //Average markup for all shop items?
 //        double buy1 = 30;

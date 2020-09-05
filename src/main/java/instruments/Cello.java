@@ -13,11 +13,10 @@ public class Cello extends Instrument{
         return size;
     }
 
+
     @Override
     public String play() {
-        return "instruments.Cello vibes ...";
+        return "Cello playing ...";
     }
-
-
 
 }
