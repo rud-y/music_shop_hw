@@ -27,5 +27,13 @@ public class MusicShopTest {
         assertEquals(2, musicShop.getStockCount());
     }
 
+    @Test
+    public void canRemoveItem() {
+        musicShop.addToStock(guitar1);
+        musicShop.addToStock(sheetMusicStand1);
+        musicShop.removeItem(sheetMusicStand1);
+        assertEquals(1, musicShop.getStockCount());
+    }
+
 
 }

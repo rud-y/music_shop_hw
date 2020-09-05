@@ -21,7 +21,11 @@ public class MusicShop {
         stock.add(item);
     }
 
-
+    public ISell removeItem(ISell item) {
+        int index = stock.indexOf(item);
+        ISell removed = this.stock.remove(index);
+        return removed;
+    }
 
 
 }
