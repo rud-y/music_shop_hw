@@ -16,7 +16,14 @@ public class MusicShop {
         return this.stock.size();
     }
 
+    public void getStockList() {
+        for(ISell item : stock) {
+               item.calculateMarkup();
+        }
+    }
+
     public void addToStock(ISell item) {
+
         stock.add(item);
     }
 

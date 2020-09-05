@@ -1,8 +1,10 @@
+import behaviours.IPlay;
 import behaviours.ISell;
 import instruments.Drum;
 import instruments.Flute;
 import instruments.Guitar;
 import instruments.Instrument;
+import otherItems.GuitarString;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -20,31 +22,31 @@ public class Runner {
         Flute flute3 = new Flute("white", "Signum", 30.00, 50.00, "oak-wood");
         Flute flute4 = new Flute("pink", "Signum", 25.00, 40.00, "plastic");
 
+        GuitarString string1 = new GuitarString(5, 14,  "steel", 0.35);
 
-
-        ArrayList<Instrument> allInstruments;
-        allInstruments = new ArrayList<Instrument>();
-        allInstruments.add(flute1);
-        allInstruments.add(flute2);
-        allInstruments.add(flute3);
-        allInstruments.add(flute4);
-        allInstruments.add(guitar1);
-        allInstruments.add(guitar2);
-        allInstruments.add(drum1);
-
-//        for(Instrument eachInstr:allInstruments){
-//            musicShop.addToStock(eachInstr);
-//        }
+        musicShop.addToStock(flute1);
+        musicShop.addToStock(flute2);
+        musicShop.addToStock(flute3);
+        musicShop.addToStock(flute4);
+        musicShop.addToStock(guitar1);
+        musicShop.addToStock(guitar2);
         musicShop.addToStock(drum1);
+        musicShop.addToStock(drum1);
+        musicShop.addToStock(string1);
         System.out.println("There is " + musicShop.getStockCount() + " items in shop inventory." );
+        System.out.println("drum1 does " + drum1.play());
 
-//        System.out.println("Welcome to Music Den");
-//        System.out.println("Choose from the instrument types:");
-//        Scanner input = new Scanner(System.in);
-//        String output = input.nextLine();
 
-        System.out.println("Markup for guitar1 is " + String.format("%.2f",guitar1.calculateMarkup()) + " percent.");
 
+//        for(IPlay eachItem : musicShop.getStockList()) {
+//            System.out.println(eachItem.play());
+//        }
+
+
+        System.out.println("Guitar1 markup " + String.format("%.2f",guitar1.calculateMarkup()) + " %.");
+        System.out.println("string1 thickness: "  + string1.getThickness());
+
+        //Average markup for all shop items?
 //        double buy1 = 30;
 //        double sell1 = 38;
 //        double buy2 = 42;

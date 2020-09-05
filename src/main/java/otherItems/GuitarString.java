@@ -20,8 +20,4 @@ public class GuitarString extends  OtherItem {
         return thickness;
     }
 
-    @Override
-    public double calculateMarkup() {
-        return super.calculateMarkup();
-    }
 }

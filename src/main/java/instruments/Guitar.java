@@ -2,20 +2,24 @@ package instruments;
 
 public class Guitar extends Instrument {
     private int strings;
-    private String type;
+    private String stringType;
 
-    public Guitar(String colour, String brand, double buyPrice, double sellPrice, int strings, String type) {
+    public Guitar(String colour, String brand, double buyPrice, double sellPrice, int strings, String stringType) {
         super(colour, brand, buyPrice, sellPrice);
         this.strings = strings;
-        this.type = type;
+        this.stringType = stringType;
+    }
+
+    public int getNumberOfStrings() {
+        return this.strings;
+    }
+
+    public String getStringType() {
+        return this.stringType;
     }
 
     public String play() {
-        return "instruments.Guitar tunes in the air...";
+        return "Playing guitar ...";
     }
 
-    @Override
-    public double calculateMarkup() {
-        return super.calculateMarkup();
-    }
 }

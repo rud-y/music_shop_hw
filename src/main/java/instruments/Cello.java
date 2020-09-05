@@ -18,9 +18,6 @@ public class Cello extends Instrument{
         return "instruments.Cello vibes ...";
     }
 
-    @Override
-    public double calculateMarkup() {
-        return super.calculateMarkup();
-    }
+
 
 }

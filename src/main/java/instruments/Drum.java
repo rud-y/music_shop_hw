@@ -20,12 +20,9 @@ public class Drum extends Instrument {
     }
 
     public String play() {
-        return "Dum, dum, ding, ding, d-d-d - tchssss.";
+        return "Dum, dum, tcsssss";
     }
 
-    @Override
-    public double calculateMarkup() {
-        return super.calculateMarkup();
-    }
+
 
 }

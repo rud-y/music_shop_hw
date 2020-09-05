@@ -15,12 +15,9 @@ public class Flute extends Instrument {
 
     @Override
     public String play() {
-        return "Fluting fills the room..";
+        return "Flute vibe filling the room..";
     }
 
-    @Override
-    public double calculateMarkup() {
-        return super.calculateMarkup();
-    }
+
 
 }
