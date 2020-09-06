@@ -4,8 +4,8 @@ public class Cello extends Instrument{
 
     private int size;
 
-    public Cello(String colour, String brand, double buyPrice, double sellPrice, int size) {
-        super(colour, brand, buyPrice, sellPrice);
+    public Cello(double buyPrice, double sellPrice, String colour, String brand, int size) {
+        super(buyPrice, sellPrice, colour, brand);
         this.size = size;
     }
 

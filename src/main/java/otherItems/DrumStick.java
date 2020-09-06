@@ -1,6 +1,6 @@
 package otherItems;
 
-public class DrumStick extends OtherItem {
+public class DrumStick extends Goods {
 
     private String material;
 
@@ -13,10 +13,6 @@ public class DrumStick extends OtherItem {
         return material;
     }
 
-    @Override
-    public double calculateMarkup() {
-        return super.calculateMarkup();
-    }
 
 
 }

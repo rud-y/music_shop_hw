@@ -1,27 +1,20 @@
-import behaviours.IPlay;
-import behaviours.ISell;
 import instruments.Drum;
 import instruments.Flute;
 import instruments.Guitar;
-import instruments.Instrument;
 import otherItems.GuitarString;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Runner {
 
     public static void main(String[] args) {
         MusicShop musicShop = new MusicShop();
-        Guitar guitar1 = new Guitar("black", "Martin", 120.00, 210.00, 5, "acoustic");
-        Guitar guitar2 = new Guitar("white", "Seagull", 310, 450, 5, "steel");
-        Drum drum1 = new Drum("white", "Yamaha", 240, 380, 48, "Floor-Tom");
+        Guitar guitar1 = new Guitar(120.00, 210.00,"black", "Martin",  5, "acoustic");
+        Guitar guitar2 = new Guitar(310, 450,"white", "Seagull",  5, "steel");
+        Drum drum1 = new Drum(240, 380,"white", "Yamaha",  48, "Floor-Tom");
 
-        Flute flute1 = new Flute("brown", "Signum", 25.00, 40.00, "cane");
-        Flute flute2 = new Flute("black", "Signum", 30.00, 50.00, "oak-wood");
-        Flute flute3 = new Flute("white", "Signum", 30.00, 50.00, "oak-wood");
-        Flute flute4 = new Flute("pink", "Signum", 25.00, 40.00, "plastic");
+        Flute flute1 = new Flute(25.00, 40.00,"brown", "Signum",  "cane");
+        Flute flute2 = new Flute(30.00, 50.00,"black", "Signum",  "oak-wood");
+        Flute flute3 = new Flute(30.00, 50.00,"white", "Signum",  "oak-wood");
+        Flute flute4 = new Flute(25.00, 40.00,"pink", "Signum",  "plastic");
 
         GuitarString string1 = new GuitarString(5, 14,  "steel", 0.35);
 

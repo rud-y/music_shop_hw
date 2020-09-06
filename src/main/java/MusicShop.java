@@ -1,7 +1,9 @@
-
 import behaviours.IPlay;
 import behaviours.ISell;
 import instruments.Instrument;
+import otherItems.Goods;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MusicShop {
@@ -27,5 +29,15 @@ public class MusicShop {
         return removed;
     }
 
+    public ArrayList<Double> getProfitsArray() {
+        ArrayList<Double> profits = new ArrayList<Double>();
+        for(ISell item: stock){
+            profits.add(item.calculateMarkup());
+        }
+        return profits;
+    }
 
+//    public double totalPotentialProfit() {
+//
+//    }
 }

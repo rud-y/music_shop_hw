@@ -2,7 +2,7 @@ package otherItems;
 
 import behaviours.ISell;
 
-public class GuitarString extends  OtherItem {
+public class GuitarString extends Goods {
     private String material;
     private double thickness;
 
@@ -19,5 +19,6 @@ public class GuitarString extends  OtherItem {
     public double getThickness() {
         return thickness;
     }
+
 
 }

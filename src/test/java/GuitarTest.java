@@ -11,7 +11,7 @@ public class GuitarTest {
     @Before
     public void before() {
 
-        guitar1 = new Guitar("black", "Washburn", 250, 350, 6, "nickel");
+        guitar1 = new Guitar(250, 350, "black", "Washburn", 6, "nickel");
 
     }
 

@@ -1,20 +1,16 @@
 package instruments;
-
 import behaviours.IPlay;
-import behaviours.ISell;
+import otherItems.Goods;
 
-public abstract class Instrument implements ISell, IPlay {
+public abstract class Instrument extends Goods implements IPlay {
 //    private String instrumentType;
     private String colour;
     private String brand;
-    double buyPrice;
-    double sellPrice;
 
-    public Instrument(String colour, String brand, double buyPrice, double sellPrice) {
+    public Instrument(double buyPrice, double sellPrice, String colour, String brand) {
+        super(buyPrice, sellPrice);
         this.colour = colour;
         this.brand = brand;
-        this.buyPrice = buyPrice;
-        this.sellPrice = sellPrice;
     }
 
     public String getColour() {
@@ -25,18 +21,6 @@ public abstract class Instrument implements ISell, IPlay {
         return brand;
     }
 
-    public double getBuyPrice() {
-        return buyPrice;
-    }
-
-    public double getSellPrice() {
-        return sellPrice;
-    }
-
     public abstract String play();
 
-    public double calculateMarkup() {
-        double sellPricePercentage = (this.sellPrice / this.buyPrice) * 100;
-        return sellPricePercentage - 100;
-    }
 }
