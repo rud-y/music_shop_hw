@@ -10,8 +10,6 @@ public class GuitarString extends Goods {
         this.thickness = thickness;
     }
 
-
-
     public String getMaterial() {
         return material;
     }

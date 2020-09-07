@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class GuitarTest {
 
     private Guitar guitar1;
+
     @Before
     public void before() {
 
