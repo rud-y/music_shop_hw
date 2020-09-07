@@ -1,7 +1,5 @@
 package otherItems;
 
-import behaviours.ISell;
-
 public class GuitarString extends Goods {
     private String material;
     private double thickness;
@@ -11,6 +9,8 @@ public class GuitarString extends Goods {
         this.material = material;
         this.thickness = thickness;
     }
+
+
 
     public String getMaterial() {
         return material;

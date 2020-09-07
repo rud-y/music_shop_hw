@@ -19,7 +19,7 @@ public class MusicShopTest {
     public void before() {
         musicShop = new MusicShop();
         guitar1 = new Guitar(250.00, 350.00,"black", "Washburn",  6, "nickel");
-        sheetMusicStand1 = new SheetMusicStand(30.00, 50.50, "blue");
+        sheetMusicStand1 = new SheetMusicStand(30.00, 50.00, "blue");
         drum1 = new Drum(255.00, 425.00,"grey", "Tama",  45,"Hi-Hat");
     }
 
@@ -38,25 +38,22 @@ public class MusicShopTest {
         assertEquals(1, musicShop.getStockCount());
     }
 
-    @Test
-    public void canCreateArrayListOfIndividualProfits() {
-        musicShop.addToStock(drum1);
-        musicShop.addToStock(guitar1);
-        musicShop.addToStock(sheetMusicStand1);
-        assertEquals(3, musicShop.getProfitsArray().size());
-    }
-
 //    @Test
-//    public void  canCalculateTotalPotentialProfit() {
+//    public void canCreateArrayListOfIndividualProfits() {
 //        musicShop.addToStock(drum1);
 //        musicShop.addToStock(guitar1);
 //        musicShop.addToStock(sheetMusicStand1);
-////        double markup = drum1.calculateMarkup();
-////        double markup2 = guitar1.calculateMarkup();
-////        double markup3 = sheetMusicStand1.calculateMarkup();
-//        double profit = musicShop.totalPotentialProfit();
-//        assertEquals(290.50, profit, 0.01);
+//        assertEquals(3, musicShop.getProfitsArray().size());
 //    }
+
+    @Test
+    public void  canCalculateTotalPotentialProfit() {
+        musicShop.addToStock(drum1);
+        musicShop.addToStock(guitar1);
+        musicShop.addToStock(sheetMusicStand1);
+        double profit = musicShop.totalPotentialProfit();
+        assertEquals(290.00, profit, 0.01);
+    }
 
 
 }

@@ -1,6 +1,6 @@
 package instruments;
 
-public class Cello extends Instrument{
+public class Cello extends Instrument {
 
     private int size;
 

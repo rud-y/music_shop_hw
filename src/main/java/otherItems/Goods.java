@@ -1,4 +1,5 @@
 package otherItems;
+
 import behaviours.ISell;
 
 public abstract class Goods implements ISell {
@@ -19,13 +20,17 @@ public abstract class Goods implements ISell {
         return sellPrice;
     }
 
+    public void setSellPrice(double sellPrice) {
+        this.sellPrice = sellPrice;
+    }
+
     public double calculateMarkupPercentage() {
         double sellPricePercentage = (this.sellPrice / this.buyPrice) * 100;
         return sellPricePercentage - 100;
     }
 
     public double calculateMarkup() {
-        double difference = this.sellPrice / this.buyPrice;
-        return difference;
+        return this.getSellPrice() / this.getBuyPrice();
     }
+
 }

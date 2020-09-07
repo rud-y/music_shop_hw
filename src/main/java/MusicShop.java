@@ -1,15 +1,10 @@
-import behaviours.IPlay;
 import behaviours.ISell;
-import instruments.Instrument;
-import otherItems.Goods;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MusicShop {
 
     private ArrayList<ISell> stock;
-    private ArrayList<IPlay> instruments;
+//    private ArrayList<IPlay> instruments;
 
     public MusicShop() {
         this.stock = new ArrayList<ISell>();
@@ -29,15 +24,24 @@ public class MusicShop {
         return removed;
     }
 
-    public ArrayList<Double> getProfitsArray() {
-        ArrayList<Double> profits = new ArrayList<Double>();
-        for(ISell item: stock){
-            profits.add(item.calculateMarkup());
-        }
-        return profits;
-    }
-
-//    public double totalPotentialProfit() {
-//
+//    public ArrayList<Double> getProfitsArray() {
+//        ArrayList<Double> profits = new ArrayList<Double>();
+//        for(ISell item: stock){
+//            profits.add(item.calculateMarkup());
+//        }
+//        return profits;
 //    }
+
+    public double totalPotentialProfit() {
+        double total = 0;
+        ArrayList<Double> profits = new ArrayList<Double>();
+        for (ISell item : stock) {
+            profits.add(item.calculateMarkup());
+
+            for (double eachProfit : profits) {
+                total += eachProfit;
+            }
+        }
+        return total;
+    }
 }

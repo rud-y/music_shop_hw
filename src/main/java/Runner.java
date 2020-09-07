@@ -30,8 +30,11 @@ public class Runner {
         System.out.println("There is " + musicShop.getStockCount() + " items in shop inventory." );
         System.out.println("drum1 does " + drum1.play());
 
-        System.out.println("Guitar1 markup " + String.format("%.2f",guitar1.calculateMarkup()) + " %.");
+        System.out.println("Guitar1 markup " + String.format("%.2f",guitar1.calculateMarkupPercentage()) + " %.");
         System.out.println("string1 thickness: "  + string1.getThickness());
+
+//        double secondItemProfit = musicShop.getProfitsArray().get(3);
+//        System.out.println("potential profit for given item is " + secondItemProfit );
 
 
 
