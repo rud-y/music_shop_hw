@@ -24,24 +24,29 @@ public class MusicShop {
         return removed;
     }
 
-//    public ArrayList<Double> getProfitsArray() {
-//        ArrayList<Double> profits = new ArrayList<Double>();
-//        for(ISell item: stock){
-//            profits.add(item.calculateMarkup());
-//        }
-//        return profits;
-//    }
+    public ArrayList<Double> getProfitsArray() {
+        ArrayList<Double> profits = new ArrayList<Double>();
+        for(ISell item: stock){
+            profits.add(item.calculateMarkup());
+        }
+        return profits;
+    }
 
     public double totalPotentialProfit() {
         double total = 0;
-        ArrayList<Double> profits = new ArrayList<Double>();
-        for (ISell item : stock) {
-            profits.add(item.calculateMarkup());
-
-            for (double eachProfit : profits) {
-                total += eachProfit;
-            }
+        ArrayList<Double> profits = new ArrayList<Double>(this.getProfitsArray());
+        for(double item : profits) {
+            total += item;
         }
         return total;
     }
+
+//    public double totalPotentialProfit() {
+//        double total = 0;
+////        ArrayList<Double> profits = new ArrayList<Double>();
+//        for (ISell item : stock) {
+//            total += item.calculateMarkup();
+//        }
+//        return total;
+//    }
 }

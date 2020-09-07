@@ -20,7 +20,7 @@ public class Drum extends Instrument {
     }
 
     public String play() {
-        return "Drum drum bam";
+        return "Bam, bam...";
     }
 
 

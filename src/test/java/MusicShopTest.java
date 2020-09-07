@@ -38,19 +38,20 @@ public class MusicShopTest {
         assertEquals(1, musicShop.getStockCount());
     }
 
-//    @Test
-//    public void canCreateArrayListOfIndividualProfits() {
-//        musicShop.addToStock(drum1);
-//        musicShop.addToStock(guitar1);
-//        musicShop.addToStock(sheetMusicStand1);
-//        assertEquals(3, musicShop.getProfitsArray().size());
-//    }
+    @Test
+    public void canCreateArrayListOfIndividualProfits() {
+        musicShop.addToStock(drum1);
+        musicShop.addToStock(guitar1);
+        musicShop.addToStock(sheetMusicStand1);
+        assertEquals(3, musicShop.getProfitsArray().size());
+    }
 
     @Test
     public void  canCalculateTotalPotentialProfit() {
         musicShop.addToStock(drum1);
         musicShop.addToStock(guitar1);
         musicShop.addToStock(sheetMusicStand1);
+        musicShop.getProfitsArray();
         double profit = musicShop.totalPotentialProfit();
         assertEquals(290.00, profit, 0.01);
     }

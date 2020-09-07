@@ -30,7 +30,7 @@ public abstract class Goods implements ISell {
     }
 
     public double calculateMarkup() {
-        return this.getSellPrice() / this.getBuyPrice();
+        return this.getSellPrice() - this.getBuyPrice();
     }
 
 }
