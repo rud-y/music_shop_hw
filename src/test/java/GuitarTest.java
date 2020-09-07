@@ -1,4 +1,5 @@
 import instruments.Guitar;
+import instruments.InstrumentType;
 import org.junit.Before;
 import org.junit.Test;
 import otherItems.SheetMusicStand;
@@ -12,7 +13,7 @@ public class GuitarTest {
     @Before
     public void before() {
 
-        guitar1 = new Guitar(250, 350, "black", "Washburn", 6, "nickel");
+        guitar1 = new Guitar(InstrumentType.STRING,250, 350, "black", "Washburn", 6, "nickel");
 
     }
 

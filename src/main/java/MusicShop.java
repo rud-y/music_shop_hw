@@ -35,6 +35,7 @@ public class MusicShop {
     public double totalPotentialProfit() {
         double total = 0;
         ArrayList<Double> profits = new ArrayList<Double>(this.getProfitsArray());
+
         for(double item : profits) {
             total += item;
         }

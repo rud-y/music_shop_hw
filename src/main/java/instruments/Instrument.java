@@ -4,13 +4,15 @@ import behaviours.ISell;
 
 
 public abstract class Instrument implements ISell, IPlay {
-//    private String instrumentType;
+
+    private InstrumentType instrumentType;
     private double buyPrice;
     private double sellPrice;
     private String colour;
     private String brand;
 
-    public Instrument(double buyPrice, double sellPrice, String colour, String brand) {
+    public Instrument(InstrumentType instrumentType, double buyPrice, double sellPrice, String colour, String brand) {
+        this.instrumentType = instrumentType;
         this.buyPrice = buyPrice;
         this.sellPrice = sellPrice;
         this.colour = colour;

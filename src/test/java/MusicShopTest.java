@@ -1,6 +1,7 @@
 import behaviours.ISell;
 import instruments.Drum;
 import instruments.Guitar;
+import instruments.InstrumentType;
 import org.junit.Before;
 import org.junit.Test;
 import otherItems.SheetMusicStand;
@@ -18,9 +19,9 @@ public class MusicShopTest {
     @Before
     public void before() {
         musicShop = new MusicShop();
-        guitar1 = new Guitar(250.00, 350.00,"black", "Washburn",  6, "nickel");
+        guitar1 = new Guitar(InstrumentType.STRING,250.00, 350.00,"black", "Washburn",  6, "nickel");
         sheetMusicStand1 = new SheetMusicStand(30.00, 50.00, "blue");
-        drum1 = new Drum(255.00, 425.00,"grey", "Tama",  45,"Hi-Hat");
+        drum1 = new Drum(InstrumentType.DRUM,250.00, 400.00,"grey", "Tama",  45,"Hi-Hat");
     }
 
     @Test
@@ -53,7 +54,7 @@ public class MusicShopTest {
         musicShop.addToStock(sheetMusicStand1);
         musicShop.getProfitsArray();
         double profit = musicShop.totalPotentialProfit();
-        assertEquals(290.00, profit, 0.01);
+        assertEquals(270.00, profit, 0.01);
     }
 
 

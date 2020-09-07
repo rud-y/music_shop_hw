@@ -5,8 +5,8 @@ public class Drum extends Instrument {
     private int diameter;
     private String type;
 
-    public Drum(double buyPrice, double sellPrice, String colour, String brand, int diameter, String type) {
-        super(buyPrice, sellPrice, colour, brand);
+    public Drum(InstrumentType instrumentType, double buyPrice, double sellPrice, String colour, String brand, int diameter, String type) {
+        super(instrumentType, buyPrice, sellPrice, colour, brand);
         this.diameter = diameter;
         this.type = type;
     }
